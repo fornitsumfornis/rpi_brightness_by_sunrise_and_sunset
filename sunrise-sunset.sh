@@ -16,7 +16,8 @@ echo -n "$(cat day.txt)" >day.txt
 
 #Input the daytime brightness below
 echo -n " * * * root echo <daytime brightness> > /sys/class/backlight/rpi_backlight/brightness" >>day.txt
-sed -i '6d;7d;8d;9d;10d;11d;12d' /etc/crontab
+#deleting all previous entries (lines 20 through 20), adjust to your crontab accordingly
+sed -i '10,20d' /etc/crontab
 sed ' ' day.txt >>/etc/crontab
 
 #sunset
