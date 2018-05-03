@@ -1,8 +1,8 @@
 #!/bin/bash
-#Pulling information from website www.timeanddate.com, just place the website 
-#for your location where "<website>" is
+#Pulling information from website www.timeanddate.com, just place the city closest to you" 
+#where "yourcity" is
 
-lynx --dump <website> > daylight.txt
+lynx --dump https://www.timeanddate.com/sun/usa/yourcity > daylight.txt
 cat daylight.txt | sed -n -e 's/^.*Sunrise Today: //p'> sunrise.txt
 cat daylight.txt | sed -n -e 's/^.*Sunset Today: //p' > sunset.txt
 
@@ -17,7 +17,7 @@ echo -n "$(cat day.txt)" >day.txt
 #Input the daytime brightness below
 echo -n " * * * root echo <daytime brightness> > /sys/class/backlight/rpi_backlight/brightness" >>day.txt
 #deleting all previous entries (lines 20 through 20), adjust to your crontab accordingly
-sed -i '10,20d' /etc/crontab
+sed -i '$ d' /etc/crontab
 sed ' ' day.txt >>/etc/crontab
 
 #sunset
