@@ -6,13 +6,13 @@ Raspbian
 
 Ubuntu Mate for ARM
 
-  It should run on other distributions (such as pidora) but I have not tested it beyond these two distros.
+**It should run on other distributions (such as pidora) but I have not tested it beyond these two distros.**
 
 ## Dependencies
 
 This package depends on lynx.  
 
-  sudo apt-get install lynx -y
+    sudo apt-get install lynx -y
 
 ## Installing
 
