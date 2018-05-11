@@ -16,4 +16,6 @@ This package depends on lynx.
 
 ## Installing
 
-
+    git clone https://github.com/fornitsumfornis/rpi_brightness_by_sunrise_and_sunset.git 
+    cd rpi_brightness_by_sunrise_sunset
+    sudo sh install.sh
