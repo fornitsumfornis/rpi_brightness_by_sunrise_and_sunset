@@ -4,7 +4,7 @@ This set of scripts changes the brightness dipslay of the 7" Raspberry Pi touchs
 ## Distribution
 ### Raspbian
 ### Ubuntu Mate for ARM
-###It should run on other distributions (such as pidora) but I have not tested it beyond these two distros.
+It should run on other distributions (such as pidora) but I have not tested it beyond these two distros.
 
 ## Dependencies
 
