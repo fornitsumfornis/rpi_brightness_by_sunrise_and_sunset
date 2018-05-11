@@ -1,5 +1,7 @@
 #/bin/sh
 echo "Using 'www.timeanddate.com/sun/', find the city closest to and where you live."  
+
+#Set the city, set the brightness
 read -p "Type name of the city:" city
 citydashed="$(echo $city | sed -e 's/ /-/g')"
 sed -i "s/yourcity/$citydashed/g" sunrise-sunset.sh
@@ -7,10 +9,16 @@ read -p "Input what you want your daytime brightness to be on a scale of 0 to 25
 sed -i "s/wake/$day/g" sunrise-sunset.sh
 read -p "Input what you want your nighttime brightness to be on a scale of 0 to 255:" night
 sed -i "s/dim/$night/g" sunrise-sunset.sh
+
+#Find the username
 pi=$(whoami)
+
+#Put the script in your /usr/local/sbin and call the script from you crontab
 echo "01 2   * * * root /bin/bash /usr/local/sbin/sunrise-sunset.sh"> picron.txt 
 sudo cat picron.txt>>/etc/crontab 
 sudo cp sunrise-sunset.sh /usr/local/sbin
+
+#Remove unecessary files
 rm picron.txt
 
 #Un-setting Restrictions so that you will be allowed to change the backlight of your pi  
