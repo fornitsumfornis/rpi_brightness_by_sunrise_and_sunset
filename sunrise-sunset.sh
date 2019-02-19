@@ -41,4 +41,8 @@ echo -e " * * * root echo dim > /sys/class/backlight/rpi_backlight/brightness\n"
 sed 'i\ ' night2.txt >> /etc/crontab
 
 #deleting the miscellanious files I created
-sudo rm /usr/local/sbin/sunrise.txt /usr/local/sbin/sunset.txt /usr/local/sbin/rise.txt /usr/local/sbin/day.txt /usr/local/sbin/set.txt /usr/local/sbin/night.txt /usr/local/sbin/night2.txt /usr/local/sbin/daylight.txt 
+sudo rm /usr/local/sbin/sunrise.txt /usr/local/sbin/sunset.txt /usr/local/sbin/rise.txt /usr/local/sbin/day.txt /usr/local/sbimd 	Update README.md 	9 months ago
+	install.sh 	Usernames 	9 months ago
+	sunrise-sunset.sh 	Add files via upload 	10 months ago0n/set.txt /usr/local/sbin/night.txt /usr/local/sbin/night2.txt /usr/local/sbin/daylight.txt 
+
+exit 0
